@@ -6,7 +6,6 @@ To analyze Netflix data using SQL and PostgreSQL to identify content trends, rat
 
 ## Schema
 
-...sql
 DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
 (
@@ -36,20 +35,16 @@ SELECT
 FROM netflix;	 
 
 SELECT * FROM netflix
-...
 
 -- 15 Business Problems 
 
-### 1. Count the number of movies vs TV Shows
-...sql
+ --1. Count the number of movies vs TV Shows
 SELECT 
      type,
 	 COUNT(*)
 FROM netflix
 GROUP BY type 
-...
-### 2. Find the most common rating for movies and TV shows
-...sql
+-- 2. Find the most common rating for movies and TV shows
 SELECT
 	TYPE RATING
 FROM
@@ -71,7 +66,7 @@ FROM
 	) AS T1
 WHERE
 	RANKING = 1
-...
+	
 --3. List all movies release in a specific year (e.g., 2020)	
 -- filter 2020
 -- movies
