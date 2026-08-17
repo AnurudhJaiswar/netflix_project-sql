@@ -2,9 +2,12 @@
 🚀 Netflix Data Analysis Project using SQL! Analyzed Netflix content, genres, ratings, countries, and trends using PostgreSQL. Used CTEs, Window Functions, Aggregations &amp; String Functions to solve real-world business problems and strengthen my SQL &amp; data analytics skills. 📊  #SQL #DataAnalytics #PostgreSQL #DataAnalyst
 ![Netflix Logo](https://github.com/AnurudhJaiswar/netflix_project-sql/blob/main/Netflix_Logomark.png)
 ## Objective
--- Netflix Project
-DROP TABLE IF EXISTS netflix;
+To analyze Netflix data using SQL and PostgreSQL to identify content trends, ratings, genres, countries, actors, and other key insights. The project aims to solve real-world business problems and strengthen my SQL, data analysis, and problem-solving skills.
 
+## Schema
+
+...sql
+DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
 (
   show_id      VARCHAR(6),
@@ -33,18 +36,20 @@ SELECT
 FROM netflix;	 
 
 SELECT * FROM netflix
+...
 
 -- 15 Business Problems 
 
---1. Count the number of movies vs TV Shows
-
+### 1. Count the number of movies vs TV Shows
+...sql
 SELECT 
      type,
 	 COUNT(*)
 FROM netflix
 GROUP BY type 
-
---2. Find the most common rating for movies and TV shows
+...
+### 2. Find the most common rating for movies and TV shows
+...sql
 SELECT
 	TYPE RATING
 FROM
@@ -66,7 +71,7 @@ FROM
 	) AS T1
 WHERE
 	RANKING = 1
-
+...
 --3. List all movies release in a specific year (e.g., 2020)	
 -- filter 2020
 -- movies
